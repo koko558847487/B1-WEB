@@ -68,3 +68,28 @@ th {
 .center {
     text-align: center;
 }
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #444;
+    margin-bottom: 20px;
+}
+
+.nav-menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #3498db;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover {
+    background-color: #2980b9;
+}
