@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoning 6</title>
+    <style>
+        .zoning {
+            width: 100%;
+            height: 400px;
+        }
+        .header {
+            background-color: purple;
+            height: 50px;
+        }
+        .main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            height: 300px;
+            gap: 2px; 
+        }
+        .article {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            border: 1px solid white; 
+        }
+        .article:nth-child(1) { background-color: red; }
+        .article:nth-child(2) { background-color: red; }
+        .article:nth-child(3) { background-color: orange; }
+        .article:nth-child(4) { background-color: orange; }
+        .article:nth-child(5) { background-color: red; }
+        .article:nth-child(6) { background-color: red; }
+        .article:nth-child(7) { background-color: orange; }
+        .article:nth-child(8) { background-color: orange; }
+        .article:nth-child(9) { background-color: green; }
+        .article:nth-child(10) { background-color: green; }
+        .article:nth-child(11) { background-color: brown; }
+        .article:nth-child(12) { background-color: brown; }
+        .article:nth-child(13) { background-color: green; }
+        .article:nth-child(14) { background-color: green; }
+        .article:nth-child(15) { background-color: brown; }
+        .article:nth-child(16) { background-color: brown; }
+        .footer {
+            background-color: pink;
+            height: 50px;
+        }
+        nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    margin: 10px 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: block;
+    background-color: #f8f8f8;
+}
+nav ul li a:hover {
+    background-color: #ddd;
+}
+    </style>
+</head>
+<body>
+    <div class="zoning">
+        <header class="header">En-tête du Haut</header>
+        <main class="main">
+            <article class="article">P01</article>
+            <article class="article">P02</article>
+            <article class="article">P03</article>
+            <article class="article">P04</article>
+            <article class="article">P05</article>
+            <article class="article">P06</article>
+            <article class="article">P07</article>
+            <article class="article">P08</article>
+            <article class="article">P09</article>
+            <article class="article">P10</article>
+            <article class="article">P11</article>
+            <article class="article">P12</article>
+            <article class="article">P13</article>
+            <article class="article">P14</article>
+            <article class="article">P15</article>
+            <article class="article">P16</article>
+        </main>
+        <footer class="footer">Zone du bas</footer>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/TP7/index.html">Menu</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

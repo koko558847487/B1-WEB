@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoning 7</title>
+    <style>
+        .zoning {
+            width: 100%;
+            height: 400px;
+        }
+        .header {
+            background-color: red;
+            height: 50px;
+        }
+        .main {
+            display: flex;
+            height: 300px;
+        }
+        .aside {
+            background-color: blue;
+            width: 20%;
+        }
+        .content {
+            display: flex;
+            width: 60%;
+            gap: 2px; /* Espace entre les colonnes */
+        }
+        .zone {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            border: 1px solid white; /* Bordure blanche pour les lignes séparatrices */
+        }
+        .zone:nth-child(odd) { background-color: green; }
+        .zone:nth-child(even) { background-color: green; }
+        .footer {
+            background-color: yellow;
+            height: 50px;
+        }
+        nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    margin: 10px 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: block;
+    background-color: #f8f8f8;
+}
+nav ul li a:hover {
+    background-color: #ddd;
+}
+    </style>
+</head>
+<body>
+    <div class="zoning">
+        <header class="header">Zone d'Illust</header>
+        <main class="main">
+            <aside class="aside">Zone d'Ouche</aside>
+            <div class="content">
+                <div class="zone">Z1</div>
+                <div class="zone">Z2</div>
+                <div class="zone">Z3</div>
+                <div class="zone">Z4</div>
+                <div class="zone">Z5</div>
+            </div>
+            <aside class="aside">Zone de Droite</aside>
+        </main>
+        <footer class="footer">Zone du bas</footer>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/TP7/index.html">Menu</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
