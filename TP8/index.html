@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devis - Lafarge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="../TP3.html"> TP3</a></li>
+          <li><a href="../TP4_HTML/index.html"> TP4</a></li>
+          <li><a href="../TP5/index.html"> TP5</a></li>
+          <li><a href="../TP6/index.html">TP6</a></li>
+          <li><a href="../TP7/index.html">TP7</a></li>
+        </ul>
+      </nav>  
+
+    <div class="container">
+        <h1>Générer un Devis</h1>
+        <form id="devisForm">
+            <h2>Informations du Devis</h2>
+            <label for="numDevis">Numéro du devis :</label>
+            <input type="text" id="numDevis" required>
+
+            <label for="dateDevis">Date du devis :</label>
+            <input type="date" id="dateDevis" required>
+
+            <h2>Émetteur du Devis</h2>
+            <label for="nomEmetteur">Nom :</label>
+            <input type="text" id="nomEmetteur" required>
+
+            <label for="contactEmetteur">Contact :</label>
+            <input type="text" id="contactEmetteur" required>
+
+            <label for="emailEmetteur">Email :</label>
+            <input type="email" id="emailEmetteur" required>
+
+            <label for="adresseEmetteur">Adresse :</label>
+            <input type="text" id="adresseEmetteur" required>
+
+            <h2>Client</h2>
+            <label for="nomClient">Nom :</label>
+            <input type="text" id="nomClient" required>
+
+            <label for="contactClient">Contact :</label>
+            <input type="text" id="contactClient" required>
+
+            <label for="adresseClient">Adresse :</label>
+            <input type="text" id="adresseClient" required>
+
+            <h2>Informations sur la dalle</h2>
+            <label for="surface">Surface (m²) :</label>
+            <input type="number" id="surface" required>
+
+            <label for="epaisseur">Épaisseur (cm) :</label>
+            <input type="number" id="epaisseur" min="15" max="35" required>
+
+            <button type="button" onclick="calculerDevis()">Obtenir le devis</button>
+        </form>
+
+        <div id="devis" class="devis hidden">
+            <header>
+                <h2>DEVIS N°<span id="afficheNumDevis"></span></h2>
+                <p>Date du devis : <span id="afficheDateDevis"></span></p>
+                <p>Validité du devis : 1 mois</p>
+            </header>
+
+            <section class="devis-info">
+                <div class="devis-contact">
+                    <h3><span id="afficheNomEmetteur"></span></h3>
+                    <p id="afficheContactEmetteur"></p>
+                    <p id="afficheEmailEmetteur"></p>
+                    <p id="afficheAdresseEmetteur"></p>
+                </div>
+                <div class="devis-contact">
+                    <h3>À L'ATTENTION DE</h3>
+                    <h3><span id="afficheNomClient"></span></h3>
+                    <p id="afficheContactClient"></p>
+                    <p id="afficheAdresseClient"></p>
+                </div>
+            </section>
+
+            <table>
+                <tr>
+                    <th>Description</th>
+                    <th>Prix</th>
+                    <th>Quantité</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>Volume de béton</td>
+                    <td>91€ / m³</td>
+                    <td><span id="volume"></span> m³</td>
+                    <td><span id="totalBeton"></span> €</td>
+                </tr>
+                <tr>
+                    <td>Nombre de camions</td>
+                    <td>140€ / camion</td>
+                    <td><span id="camions"></span></td>
+                    <td><span id="totalCamions"></span> €</td>
+                </tr>
+            </table>
+
+            <p class="sous-total"><strong>Sous-total :</strong> <span id="prixHT"></span> € HT</p>
+            <p><strong>TVA (20%) :</strong> <span id="tva"></span> €</p>
+            <p class="total"><strong>Total TTC :</strong> <span id="prixTTC"></span> €</p>
+
+            <footer>
+                <p><strong>Termes et conditions :</strong> 30% d'acompte requis avant livraison.</p>
+                <p class="signature">Signature du client :</p>
+            </footer>
+
+            <button onclick="imprimerDevis()">Imprimer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
