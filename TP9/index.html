@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP9 - Web Dynamique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><button onclick="showExercise('exo1')">Exercice 1</button></li>
+      <li><button onclick="showExercise('exo2')">Exercice 2</button></li>
+      <li><button onclick="showExercise('exo3')">Exercice 3</button></li>
+      <li><button onclick="showExercise('exo4')">Exercice 4</button></li>
+       <nav>
+        <ul>
+          <li><a href="../TP3.html"><button>TP3</button></a></li>
+          <li><a href="../TP4_HTML/index.html"><button>TP4</button></a></li>
+          <li><a href="../TP5/index.html"><button>TP5</button></a></li>
+          <li><a href="../TP6/index.html"><button>TP6</button></a></li>
+          <li><a href="../TP7/index.html"><button>TP7</button></a></li>
+          <li><a href="../TP8/index.html"><button>TP8</button></a></li>
+        </ul>        
+  </nav>  
+    </ul>
+  </nav>
+  <main>
+    <section id="exo1" class="exercise">
+      <!-- Exercice 1: Texte avec définitions -->
+      <p>
+        Lorem <span class="def-word" data-key="ipsum">ipsum</span> <span class="def-word" data-key="dolor">dolor</span> sit <span class="def-word" data-key="amet">amet</span>, 
+        <span class="def-word" data-key="consectetur">consectetur</span> adipiscing <span class="def-word" data-key="adipiscing">elit</span>. 
+        Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+      </p>      
+      <div id="popup" class="popup hidden">
+        <h3 id="popup-title"></h3>
+        <p id="popup-text"></p>
+      </div>
+    </section>
+
+    <section id="exo2" class="exercise hidden">
+      <!-- Exercice 2: Formulaire de visite -->
+      <form id="visitForm">
+        <input type="text" placeholder="Nom" name="nom" required>
+        <input type="text" placeholder="Prénom" name="prenom" required>
+        <select name="filiere">
+          <option value="Bac pro">Bac pro</option>
+          <option value="STI">STI</option>
+          <option value="STMG">STMG</option>
+          <option value="Général">Général</option>
+        </select>
+        <button type="submit">Valider</button>
+      </form>
+      <table id="visitorTable">
+        <thead><tr><th>Nom</th><th>Prénom</th><th>Filière</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="exo3" class="exercise hidden">
+      <!-- Exercice 3: Compte à rebours -->
+      <h2>Compte à rebours avant la fin de l'année scolaire:</h2>
+      <div id="countdown"></div>
+    </section>
+
+    <section id="exo4" class="exercise hidden">
+      <!-- Exercice 4: Calendrier dynamique -->
+      <form id="calendarForm">
+        <input type="number" name="day" placeholder="Jour de départ (1=lundi)" required>
+        <input type="number" name="month" placeholder="Mois (1-12)" required>
+        <input type="number" name="year" placeholder="Année" required>
+        <select name="taille">
+          <option value="petit">Petit</option>
+          <option value="moyen">Moyen</option>
+          <option value="grand">Grand</option>
+        </select>
+        <input type="color" name="color" value="#000000">
+        <button type="submit">Générer</button>
+      </form>
+      <div id="calendar"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
