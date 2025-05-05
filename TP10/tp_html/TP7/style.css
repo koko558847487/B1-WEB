@@ -1,0 +1,22 @@
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    margin: 10px 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: block;
+    background-color: #f8f8f8;
+}
+nav ul li a:hover {
+    background-color: #ddd;
+}
+</style>
